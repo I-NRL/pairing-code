@@ -1,0 +1,29 @@
+{
+  "name": "inrl-bot",
+  "version": "1.0.0",
+  "description": "deployable react ap",
+  "main": "server/index.js",
+  "scripts": {
+    "start": "node server/index",
+    "server": "nodemon server/index",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "prebuild": "npm install",
+    "build": "cd client && npm install && npm run build"
+  },
+  "keywords": [],
+  "author": "I-N-R-L",
+  "license": "MIT",
+  "dependencies": {
+    "@octokit/core": "^4.2.0",
+    "@whiskeysockets/baileys": "^6.7.7",
+    "axios": "1.6.8",
+    "cors": "^2.8.5",
+    "express": "^4.18.1",
+    "fs-extra": "^11.1.1",
+    "ipinfo": "^1.5.1",
+    "path": "^0.12.7",
+    "pino": "^9.3.2",
+    "socket.io": "^4.7.5"
+  }
+}
